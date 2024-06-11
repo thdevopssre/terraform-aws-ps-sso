@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "pablosspot"
+    organization = "thadeu"
 
     workspaces {
       prefix = "ps-sso-"

@@ -1,9 +1,22 @@
-terraform {
-    source = "."
-}
+module "terraform" {
+  source = "/tfvars/main.tfvars/"
 
-inputs = {
+  inputs = {
     permissions_list = [
-        # Define your permission set here
+      {
+        name             = "AdministratorAccess"
+        description      = "AdministratorAccess"
+        managed_policies = []
+        aws_accounts     = []
+        sso_groups       = []
+      },
+      {
+        name             = "ViewOnlyAccess"
+        description      = "ViewOnlyAccess"
+        managed_policies = []
+        aws_accounts     = []
+        sso_groups       = []
+      }
     ]
+  }
 }
